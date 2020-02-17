@@ -11,7 +11,9 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return an array of strings, each element representative of a respective word in the sentence
      */
     public static String[] getWords(String sentence) {
-        return null;
+        String[] result = null;
+        result = sentence.split(" ");
+        return result;
     }
 
 
@@ -21,7 +23,8 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word of the sentence
      */
     public static String getFirstWord(String sentence) {
-        return null;
+        String result = sentence.substring(0, sentence.indexOf(" "));
+        return result;
     }
 
     /**
@@ -30,7 +33,12 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order
      */
     public static String reverseFirstWord(String sentence) {
-        return null;
+        String firstWord = getFirstWord(sentence);
+        String result = "";
+        for(int i = firstWord.length()-1; i>= 0;i--) {
+            result+=firstWord.charAt(i);
+        }
+        return result;
     }
 
     /**
@@ -39,7 +47,9 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order with the first character capitalized
      */
     public static String reverseFirstWordThenCamelCase(String sentence) {
-        return null;
+        String revWord = reverseFirstWord(sentence);
+        String revResult = revWord.substring(0, 1).toUpperCase() + revWord.substring(1);
+        return revResult;
     }
 
 
@@ -50,7 +60,8 @@ public class StringUtils {
      * given a string and index, return an identical string excluding the character at the specified index
      */
     public static String removeCharacterAtIndex(String str, int index) {
-        return null;
+        String result = str.substring(0,index) + str.substring(index+1);
+        return result;
     }
 
 }
