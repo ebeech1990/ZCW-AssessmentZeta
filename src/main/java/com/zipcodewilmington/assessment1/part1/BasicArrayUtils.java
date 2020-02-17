@@ -9,7 +9,8 @@ public class BasicArrayUtils {
      * @return the first element in the array
      */
     public static String getFirstElement(String[] stringArray) {
-        return null;
+
+        return stringArray[0];
     }
 
     /**
