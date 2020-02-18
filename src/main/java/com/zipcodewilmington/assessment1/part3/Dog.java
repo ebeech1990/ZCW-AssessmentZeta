@@ -18,8 +18,8 @@ public class Dog extends Pet {
      */
     public Dog(Integer age) {
 
-        super(age);
-        this.name = "Dog name";
+        super("Dog name",age);
+
     }
 
     /**
@@ -37,8 +37,8 @@ public class Dog extends Pet {
      * age is 0
      */
     public Dog() {
-        this.name = "Dog name";
-        this.age = 0;
+        super("Dog name", 0);
+
     }
 
     /**
