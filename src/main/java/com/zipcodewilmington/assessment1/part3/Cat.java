@@ -16,16 +16,16 @@ public class Cat extends Pet {
      * @param age age of this Cat
      */
     public Cat(Integer age) {
-        super(age);
-        this.name = "Cat name";
+        super("Cat name", age);
+
     }
 
     /**
      * @param name name of this Cat
      */
     public Cat(String name) {
-        super(name);
-        this.age = 0;
+        super(name, 0);
+
     }
 
     /**
@@ -35,8 +35,8 @@ public class Cat extends Pet {
      * age is 0
      */
     public Cat() {
-        this.name = "Cat name";
-        this.age = 0;
+        super("Cat name", 0);
+
     }
 
     /**
